@@ -1,14 +1,18 @@
-[tool.poetry]
+[project]
 name = "messaging-broker-system"
 version = "0.1.0"
-description = ""
-authors = ["Florent Haxhiu <florenthaxhiu03@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.10.6",
+    "websockets>=14.2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-
+[project.scripts]
+server = "messaging_broker_system:server"
+client = "messaging_broker_system:client"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
